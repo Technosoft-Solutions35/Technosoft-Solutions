@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Technosoft-Solutions35.github.io/technosoft-solutions/sitemap.xml

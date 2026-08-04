@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technosoft Solutions — Sistemas Operativos</title>
+    <meta name="description" content="Instalación, configuración, auditoría y optimización de sistemas operativos con paquetes incrementales.">
+    <meta property="og:title" content="Technosoft Solutions — Sistemas Operativos">
+    <meta property="og:description" content="Configuración, auditoría y optimización de entornos de software.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://Technosoft-Solutions35.github.io/technosoft-solutions/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="theme-color" content="#070b17">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("tec-tema");
+          if (t !== "claro" && t !== "oscuro") {
+            t = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "claro" : "oscuro";
+          }
+          document.documentElement.setAttribute("data-tema", t);
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) { m.setAttribute("content", t === "claro" ? "#eef2fb" : "#070b17"); }
+        } catch (e) {
+          document.documentElement.setAttribute("data-tema", "oscuro");
+        }
+      })();
+    </script>
+</head>
+<body>
+
+    <header class="barra-superior">
+        <div class="barra-contenido">
+            <a class="marca" href="index.html" aria-label="Technosoft Solutions — Inicio">
+                <span class="marca-icono" aria-hidden="true">
+                    <svg viewBox="0 0 40 40" width="34" height="34">
+                        <defs>
+                            <linearGradient id="marcaDeg" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#22d3ee"></stop>
+                                <stop offset="1" stop-color="#8b5cf6"></stop>
+                            </linearGradient>
+                        </defs>
+                        <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#marcaDeg)"></rect>
+                        <path d="M12.5 14.5h15M20 14.5V26" fill="none" stroke="#060a15" stroke-width="3.6" stroke-linecap="round"></path>
+                    </svg>
+                </span>
+                <span class="marca-texto">
+                    <span class="marca-nombre">Technosoft <span>Solutions</span></span>
+                    <span class="marca-sub">Ingeniería &amp; Capacitación</span>
+                </span>
+            </a>
+
+            <div class="barra-derecha">
+                        <button class="boton-menu" type="button" id="botonMenu" aria-expanded="false" aria-controls="menuNavegacion" aria-label="Abrir o cerrar el menú">
+                <span class="boton-menu-linea" aria-hidden="true"></span>
+                <span class="boton-menu-linea" aria-hidden="true"></span>
+                <span class="boton-menu-linea" aria-hidden="true"></span>
+            </button>
+
+            <button class="boton-tema" type="button" id="botonTema" aria-label="Cambiar entre modo claro y oscuro">
+                    <svg class="tema-icono tema-icono-sol" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="tema-icono tema-icono-luna" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+                </button>
+
+            <nav class="navegacion" id="menuNavegacion" aria-label="Navegación principal">
+                <a href="index.html" class="enlace-nav">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>
+                    Inicio
+                </a>
+                <a href="software.html" class="enlace-nav">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m13 4-2 16"/></svg>
+                    Software
+                </a>
+                <a href="tutorias.html" class="enlace-nav">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12.5V16c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-3.5"/><path d="M22 10v5"/></svg>
+                    Tutorías y Cursos
+                </a>
+                <a href="sistemas.html" class="enlace-nav activo" aria-current="page">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><rect x="10" y="10" width="4" height="4"/></svg>
+                    Sistemas
+                </a>
+                <a href="atencion-cliente.html" class="enlace-nav">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M4.9 4.9 8.6 8.6"/><path d="m15.4 15.4 3.7 3.7"/><path d="M19.1 4.9 15.4 8.6"/><path d="m8.6 15.4-3.7 3.7"/></svg>
+                    Atención al Cliente
+                </a>
+                <a href="contratar.html" class="boton-nav-cta">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg>
+                    Contratar Servicio
+                </a>
+            </nav>
+        </div>
+        </div>
+    </header>
+
+    <main class="contenedor-principal contenedor">
+        <section class="hero animar">
+            <h1 class="hero-titulo">Sistemas <span class="resaltado">Operativos</span></h1>
+            <p class="hero-subtitulo">Configuración, auditoría y optimización de entornos de software. Paquetes estructurados de manera incremental para que tu computadora o laptop trabaje a la máxima velocidad, con total estabilidad y adaptada a lo que necesitas.</p>
+        </section>
+
+        <section class="lista-vertical">
+            <article class="bloque-servicio animar">
+                <span class="tarjeta-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/><path d="M3 12h18"/></svg>
+                </span>
+                <div class="bloque-servicio-info">
+                    <h3>Pack Básico: Instalación Esencial</h3>
+                    <p>Instalación limpia y desde cero del sistema operativo de tu preferencia (Windows 10 o Windows 11). Incluye la configuración y actualización completa de todos los controladores (drivers) esenciales del hardware para garantizar la estabilidad y el correcto encendido de tu PC o laptop.</p>
+                </div>
+                <div class="bloque-servicio-accion">
+                    <a class="btn btn-primario" href="pack-basico.html">Ver detalles</a>
+                    <a class="btn btn-secundario" href="contratar.html?servicio=Sistemas%20Operativos&categoria=Pack%20B%C3%A1sico%3A%20Instalaci%C3%B3n%20Esencial">Contratar</a>
+                </div>
+            </article>
+
+            <article class="bloque-servicio animar">
+                <span class="tarjeta-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12 13 7l-9 5 9 5 9-5Z"/><path d="M4 17v-3.5"/><path d="M12 7v3"/><path d="m17 9.5 3 1.5v3"/></svg>
+                </span>
+                <div class="bloque-servicio-info">
+                    <h3>Pack Intermedio: Listo para Trabajar</h3>
+                    <p>Incluye todo lo del Pack Básico, más la instalación de una suite completa de aplicaciones de primera necesidad para el uso cotidiano: paquete de oficina, navegadores optimizados, reproductores multimedia y utilidades de conversión de archivos.</p>
+                </div>
+                <div class="bloque-servicio-accion">
+                    <a class="btn btn-primario" href="pack-intermedio.html">Ver detalles</a>
+                    <a class="btn btn-secundario" href="contratar.html?servicio=Sistemas%20Operativos&categoria=Pack%20Intermedio%3A%20Listo%20para%20Trabajar">Contratar</a>
+                </div>
+            </article>
+
+            <article class="bloque-servicio animar">
+                <span class="tarjeta-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></svg>
+                </span>
+                <div class="bloque-servicio-info">
+                    <h3>Pack Avanzado: Software Especializado</h3>
+                    <p>El plan definitivo. Incluye todo lo del Pack Básico e Intermedio, más la configuración e instalación avanzada de herramientas profesionales adaptadas a tu sector: contabilidad, diseño y edición, o entornos de desarrollo e informática.</p>
+                </div>
+                <div class="bloque-servicio-accion">
+                    <a class="btn btn-primario" href="pack-avanzado.html">Ver detalles</a>
+                    <a class="btn btn-secundario" href="contratar.html?servicio=Sistemas%20Operativos&categoria=Pack%20Avanzado%3A%20Software%20Especializado">Contratar</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="banda-cta animar">
+            <h2>¿Tu equipo necesita una puesta a punto?</h2>
+            <p>Elige el pack que mejor se adapte a tu día a día y te explicamos todo el detalle.</p>
+            <div class="hero-acciones" style="margin-bottom:0;">
+                <a class="btn btn-primario btn-grande" href="contratar.html?servicio=Sistemas%20Operativos">Solicitar información</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="pie-contenido">
+            <div class="pie-bloque pie-bloque-marca">
+                <a class="marca" href="index.html" aria-label="Technosoft Solutions — Inicio">
+                    <span class="marca-icono" aria-hidden="true">
+                        <svg viewBox="0 0 40 40" width="30" height="30">
+                            <defs>
+                                <linearGradient id="marcaDegPie" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="#22d3ee"></stop>
+                                    <stop offset="1" stop-color="#8b5cf6"></stop>
+                                </linearGradient>
+                            </defs>
+                            <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#marcaDegPie)"></rect>
+                            <path d="M12.5 14.5h15M20 14.5V26" fill="none" stroke="#060a15" stroke-width="3.6" stroke-linecap="round"></path>
+                        </svg>
+                    </span>
+                    <span class="marca-texto">
+                        <span class="marca-nombre">Technosoft <span>Solutions</span></span>
+                    </span>
+                </a>
+                <p class="pie-descripcion">Taller especializado en desarrollo de software, capacitación en ofimática y optimización de sistemas. Soluciones informáticas a tu medida.</p>
+            </div>
+            <div class="pie-bloque">
+                <h4 class="pie-titulo">Explorar</h4>
+                <ul class="pie-lista">
+                    <li><a href="software.html">Desarrollo de Software</a></li>
+                    <li><a href="tutorias.html">Tutorías y Cursos</a></li>
+                    <li><a href="sistemas.html">Sistemas Operativos</a></li>
+                    <li><a href="contratar.html">Contratar Servicio</a></li>
+                </ul>
+            </div>
+            <div class="pie-bloque">
+                <h4 class="pie-titulo">Contacto</h4>
+                <ul class="pie-lista">
+                    <li><a href="mailto:technosoftsolutions35@gmail.com">technosoftsolutions35@gmail.com</a></li>
+                    
+                    <li>Horario: Lun–Sáb · 9:00–18:00</li>
+                    <li>Ciudad, País</li>
+                </ul>
+            </div>
+            <div class="pie-bloque">
+                <h4 class="pie-titulo">Atención al Cliente</h4>
+                <ul class="pie-lista">
+                    <li><a href="atencion-cliente.html">Reportar un problema</a></li>
+                    <li><a href="atencion-cliente.html#preguntas">Preguntas frecuentes</a></li>
+                    <li><a href="atencion-cliente.html#formulario-reporte">Quejas o sugerencias</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pie-legal">
+            <p>© <span id="anioActual">2026</span> Technosoft Solutions. Todos los derechos reservados.</p>
+            <p class="pie-legal-enlaces"><a href="atencion-cliente.html">Atención al Cliente</a> · <a href="contratar.html">Contratar</a></p>
+        </div>
+    </footer>
+
+    <script src="js/config.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
