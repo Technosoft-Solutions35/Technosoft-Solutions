@@ -77,11 +77,12 @@ html {
 body {
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color: var(--texto);
-  background:
+  background-color: var(--fondo);
+  background-image:
     radial-gradient(1100px 560px at 88% -8%, rgba(139, 92, 246, 0.18), transparent 60%),
     radial-gradient(950px 500px at -8% 12%, rgba(34, 211, 238, 0.14), transparent 55%),
     linear-gradient(180deg, var(--fondo) 0%, var(--fondo-suave) 55%, var(--fondo) 100%);
-  background-attachment: fixed;
+  background-attachment: scroll;
   min-height: 100vh;
   overflow-x: hidden;
   line-height: 1.6;
@@ -120,7 +121,7 @@ img, svg {
 
 /* ---------- Barra de navegación superior (la más importante del sitio) ---------- */
 .barra-superior {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -353,7 +354,7 @@ img, svg {
 
 /* ---------- Estructura principal ---------- */
 .contenedor-principal {
-  padding-top: 124px;
+  padding-top: 48px;
   padding-bottom: 60px;
 }
 
@@ -1335,7 +1336,7 @@ img, svg {
 
 @media (max-width: 640px) {
   .contenedor-principal {
-    padding-top: 106px;
+    padding-top: 30px;
   }
 
   .pie-contenido {
@@ -1364,7 +1365,7 @@ img, svg {
 /* Mejoras móvil */
 @media (max-width: 640px) {
   body {
-    background-attachment: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
   .marca-sub {
